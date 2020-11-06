@@ -1,0 +1,43 @@
+{
+  "name": "graduate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@google-cloud/text-to-speech": "^3.1.1",
+    "@zeit/next-sass": "^1.0.1",
+    "antd": "^4.6.6",
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "google-tts-api": "0.0.4",
+    "next": "^9.5.3",
+    "next-redux-wrapper": "^6.0.2",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "pug": "^3.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-speech-recognition": "^3.2.3",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "request": "^2.88.2",
+    "styled-components": "^5.2.0",
+    "window-or-global": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
+    "eslint": "^7.10.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.21.3",
+    "eslint-plugin-react-hooks": "^4.1.2"
+  }
+}

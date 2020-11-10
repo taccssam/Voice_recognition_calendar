@@ -1,10 +1,20 @@
+require("dotenv").config();
+
 import axios from "axios";
 
 export const Kakao = axios.create({
-  baseURL: "https://dapi.kakao.com", // 공통 요청 경로를 지정해준다.
+  baseURL: "https://kakaoi-newtone-openapi.kakao.com",
   headers: {
-    Authorization: "KakaoAK {7b08f2de8822b6ee1b328aaafa94d0f6}" // 공통으로 요청 할 헤더
+    Authorization: "KakaoAK {"+KAKAO_KEY+"}"
   }
 });
+
+export const recognize = params => {
+  return Kakao.get("/v1/recognize", { params });
+};
+
+export const synthesize = params => {
+  return Kakao.get("/v1/synthesize", { params });
+};
 
 

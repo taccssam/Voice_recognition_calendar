@@ -16,6 +16,7 @@
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "dotenv": "^8.2.0",
+    "env": "0.0.2",
     "express": "^4.17.1",
     "google-tts-api": "0.0.4",
     "next": "^9.5.3",

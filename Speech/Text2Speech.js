@@ -1,4 +1,4 @@
-export function quickStart(txt) {
+export const SpeechText = (txt) => {
     
 
     if(!speechSynthesis) {

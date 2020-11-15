@@ -1,31 +1,5 @@
-import { recognition } from "./speechStart";
+(function(window){
 
-
-const MIC = `mic`;
-
-
-export const ret="";
-
-export const saveMic = (coordsObj) => {
-    localStorage.setItem(COORDS, JSON.stringify(coordsObj));
-}
-
-export const initMic = () => {
-    /*const loadedMIC = localStorage.getItem(MIC);
-    if (loadedMIC !== "prompt") {
-        navigator.permissions
-            .query({ name: "microphone" })
-            .then(function (permissionStatus) {
-                // granted, denied, prompt
-                localStorage.setItem(MIC, permissionStatus.state);
-                permissionStatus.granted = function () {
-                    localStorage.setItem(MIC, permissionStatus.state);
-                };
-            });
-    }
-    recognition.start();*/
-   
-}
 
 	function message(msg){  
 	    try {
@@ -63,12 +37,12 @@ export const initMic = () => {
          }
 	}  
 
-	var Recorder = (source, cfg) => {
+	export var Recorder = function(source, cfg){
 		var config = cfg || {};
 		CLOG(config);
 		var bufferLen = config.bufferLen || 4096;
 		var worker;
-		var WORKER_PATH = 'web/recorderWorker.js' + config.cachedate;
+		var WORKER_PATH = '/static/js/recodeWorker.js?' + config.cachedate;
         CLOG('bufferLen='+bufferLen);
         this.connection = false;
 		this.context = source.context;
@@ -195,6 +169,7 @@ export const initMic = () => {
         CLOG('Recorder end');
 	};
 
-	window.Recorder = Recorder;
+	//window.Recorder = Recorder;
     //WebCon();
 
+})(window);

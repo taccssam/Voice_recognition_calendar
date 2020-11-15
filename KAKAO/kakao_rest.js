@@ -16,5 +16,3 @@ export const recognize = params => {
 export const synthesize = params => {
   return Kakao.get("/v1/synthesize", { params });
 };
-
-

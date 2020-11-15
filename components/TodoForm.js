@@ -7,7 +7,6 @@ import { ret, recognition,clearRet } from "../Speech/speechStart";
 import { UpdateSpeech } from "../Speech/speechAction";
 import { quickStart } from "../Speech/Text2Speech";
 
-var googleTTS = require('google-tts-api');
 
 const TodoForm = () => {
   
@@ -25,7 +24,7 @@ const TodoForm = () => {
   const onSubmit = useCallback(() => {
     console.log(ret);
     //dispatch(addPost);
-    quickStart(ret);
+    //quickStart(ret);
     UpdateSpeech(ret);
     clearRet();
     setDos("");

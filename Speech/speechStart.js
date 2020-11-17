@@ -1,4 +1,4 @@
-export let ret = "";
+/*export let ret = "";
 
 window.SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -23,4 +23,4 @@ recognition.onresult = function (e) {
 
 export const clearRet = () => {
   ret = "";
-}
+}*/

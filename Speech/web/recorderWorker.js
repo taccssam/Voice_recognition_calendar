@@ -1,3 +1,4 @@
+
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioContext = new AudioContext();
 var audioInput = null,
@@ -107,7 +108,7 @@ function gotStream(stream) {
     audioInput = realAudioInput;
     audioInput.connect(inputPoint);
 //    audioInput = convertToMono( input );
-    analyserNode = audioContext.createAnalyser();
+    let analyserNode = audioContext.createAnalyser();
     analyserNode.fftSize = 2048;
     inputPoint.connect( analyserNode );
     audioRecorder = new Recorder( inputPoint );
@@ -117,7 +118,7 @@ function gotStream(stream) {
     zeroGain.connect( audioContext.destination );
     updateAnalysers();
 }
-function initAudio() {
+export function initAudio() {
         if (!navigator.getUserMedia)
             navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
         if (!navigator.cancelAnimationFrame)

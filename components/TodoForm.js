@@ -5,7 +5,9 @@ import { addPost } from "../reducers/post";
 import { initMic } from "../Speech/micSet";
 import { ret, recognition,clearRet } from "../Speech/speechStart";
 import { UpdateSpeech } from "../Speech/speechAction";
-import { quickStart } from "../Speech/Text2Speech";
+import { SpeechText } from "../Speech/Text2Speech";
+import { initAudio } from "../Speech/web/recorderWorker";
+
 
 
 const TodoForm = () => {
@@ -17,9 +19,9 @@ const TodoForm = () => {
       setDos(e.target.value);
     }, []);
 
-  recognition.onend = () => {
+  /*recognition.onend = () => {
     setDos(ret);
-    };
+    };*/
 
   const onSubmit = useCallback(() => {
     console.log(ret);
@@ -41,7 +43,7 @@ const TodoForm = () => {
         <Button type="primary" htmlType="submit" loading={false}>
           추가
         </Button>
-        <Button type="primary" onClick={initMic} loading={false}>
+        <Button type="primary" onClick={initAudio} loading={false}>
           입력
         </Button>
       </div>

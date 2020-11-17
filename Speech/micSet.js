@@ -24,7 +24,7 @@ export const initMic = () => {
             });
     }
     recognition.start();*/
-   
+	window.Recorder = Recorder;
 }
 
 	function message(msg){  
@@ -68,7 +68,7 @@ export const initMic = () => {
 		CLOG(config);
 		var bufferLen = config.bufferLen || 4096;
 		var worker;
-		var WORKER_PATH = 'web/recorderWorker.js' + config.cachedate;
+		var WORKER_PATH = '/web/recorderWorker.js' + config.cachedate;
         CLOG('bufferLen='+bufferLen);
         this.connection = false;
 		this.context = source.context;
@@ -195,6 +195,6 @@ export const initMic = () => {
         CLOG('Recorder end');
 	};
 
-	window.Recorder = Recorder;
+
     //WebCon();
 

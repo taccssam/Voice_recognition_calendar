@@ -6,8 +6,9 @@ import { initMic } from "../Speech/micSet";
 import { ret, recognition,clearRet } from "../Speech/speechStart";
 import { UpdateSpeech } from "../Speech/speechAction";
 import { SpeechText } from "../Speech/Text2Speech";
-import { initAudio } from "../Speech/web/recorderWorker";
-
+import { synthesize, recognize } from "../KAKAO/kakao_rest";
+import {recorder,blob} from "../Speech/recorder";
+import { console } from "window-or-global";
 
 
 const TodoForm = () => {
@@ -19,14 +20,19 @@ const TodoForm = () => {
       setDos(e.target.value);
     }, []);
 
-  /*recognition.onend = () => {
-    setDos(ret);
-    };*/
+    if (typeof window !== "undefined") {
+    recognition.onend = () => {
+      setDos(ret);
+    };
+  }
+  
 
   const onSubmit = useCallback(() => {
     console.log(ret);
     //dispatch(addPost);
     //quickStart(ret);
+    //recognize(ret);
+    console.log(blob);
     UpdateSpeech(ret);
     clearRet();
     setDos("");
@@ -43,7 +49,7 @@ const TodoForm = () => {
         <Button type="primary" htmlType="submit" loading={false}>
           추가
         </Button>
-        <Button type="primary" onClick={initAudio} loading={false}>
+        <Button type="primary" onClick={initMic} loading={false}>
           입력
         </Button>
       </div>

@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
+    "@gkt/microphone": "^1.0.3",
     "@google-cloud/text-to-speech": "^3.1.1",
     "@zeit/next-sass": "^1.0.1",
     "antd": "^4.6.6",
@@ -32,6 +33,7 @@
     "redux-devtools-extension": "^2.13.8",
     "request": "^2.88.2",
     "styled-components": "^5.2.0",
+    "wav-web-audio-recorder": "^0.2.1",
     "window-or-global": "^1.0.1"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@ export const saveMic = (coordsObj) => {
 }
 
 export const initMic = () => {
-    /*const loadedMIC = localStorage.getItem(MIC);
+    const loadedMIC = localStorage.getItem(MIC);
     if (loadedMIC !== "prompt") {
         navigator.permissions
             .query({ name: "microphone" })
@@ -23,10 +23,10 @@ export const initMic = () => {
                 };
             });
     }
-    recognition.start();*/
-	window.Recorder = Recorder;
+    recognition.start();
+	//window.Recorder = Recorder;
 }
-
+/*
 	function message(msg){  
 	    try {
             var parsedJson = JSON.parse(msg);
@@ -198,3 +198,4 @@ export const initMic = () => {
 
     //WebCon();
 
+*/

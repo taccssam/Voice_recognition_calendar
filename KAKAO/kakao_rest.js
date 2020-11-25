@@ -1,6 +1,8 @@
-require("dotenv").config();
+//require("dotenv").config();
 
 import axios from "axios";
+
+const KAKAO_KEY = "7b08f2de8822b6ee1b328aaafa94d0f6";
 
 export const Kakao = axios.create({
   baseURL: "https://kakaoi-newtone-openapi.kakao.com",
